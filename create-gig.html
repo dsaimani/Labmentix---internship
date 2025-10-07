@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FiverrClone - Create a Gig</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <header class="navbar">
+      <div class="logo">Fiverr<span>Clone</span></div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="all-gigs.html">All Gigs</a>
+        <a href="create-gig.html">Create a Gig</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
+      <div class="auth-buttons">
+        <button class="btn small">Log In</button>
+        <button class="btn small primary">Sign Up</button>
+      </div>
+    </header>
+
+    <section class="create-gig">
+      <form id="gigForm">
+        <input type="file" id="gigImage" required />
+        <input type="text" id="gigTitle" placeholder="Gig Title" required />
+        <input type="number" id="gigPrice" placeholder="Price ($)" required />
+        <textarea
+          id="gigDesc"
+          rows="3"
+          placeholder="Description"
+          required
+        ></textarea>
+        <button type="submit">Post Gig</button>
+      </form>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FiverrClone</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <header class="navbar">
+      <div class="logo">Fiverr<span>Clone</span></div>
+
+      <nav class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">All Gigs</a>
+        <a href="#">Create a Gig</a>
+        <a href="#">Contact Us</a>
+      </nav>
+
+      <div class="auth-buttons">
+        <button class="btn small">Log In</button>
+        <button class="btn small primary">Sign Up</button>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1>Find the right freelance service, right away</h1>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories">
+      <div class="category">🎨 Graphics & Design</div>
+      <div class="category">📢 Digital Marketing</div>
+      <div class="category">✍️ Writing & Translation</div>
+      <div class="category">🎥 Video & Animation</div>
+    </section>
+
+    <!-- Create a Gig -->
+    <section class="create-gig">
+      <h2>Create a Gig</h2>
+      <form id="gigForm">
+        <input type="file" id="gigImage" required />
+        <input type="text" id="gigTitle" placeholder="Gig Title" required />
+        <input type="number" id="gigPrice" placeholder="Price ($)" required />
+        <textarea
+          id="gigDesc"
+          rows="3"
+          placeholder="Description"
+          required
+        ></textarea>
+        <button type="submit">Post Gig</button>
+      </form>
+    </section>
+
+    <!-- Main Layout (Gigs + Chat) -->
+    <div class="main-content">
+      <!-- Gigs Section -->
+      <section class="gigs">
+        <h2>Available Gigs</h2>
+        <div id="gigsList">
+          <div class="gig"><span>🌐 Web Design</span><span>$200</span></div>
+          <div class="gig"><span>📱 Social Media</span><span>$150</span></div>
+          <div class="gig"><span>✍️ Content Writing</span><span>$75</span></div>
+        </div>
+      </section>
+
+      <!-- Chat Section -->
+      <section class="chat-panel">
+        <h2>Simulated Chat</h2>
+        <input
+          type="text"
+          id="recipientId"
+          placeholder="Recipient ID"
+          style="width: 100%; margin-bottom: 10px; padding: 8px"
+        />
+        <div class="chat-box" id="chatBox"></div>
+        <div class="chat-input">
+          <input type="text" id="chatMessage" placeholder="Type message..." />
+          <button onclick="sendMessage()">Send</button>
+        </div>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
